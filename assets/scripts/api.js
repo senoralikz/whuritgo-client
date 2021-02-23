@@ -50,10 +50,22 @@ const showExpenses = function () {
   })
 }
 
+const newExpense = function (formData) {
+  return $.ajax({
+    url: config.apiUrl + '/expenses/',
+    method: 'POST',
+    data: JSON.stringify(formData),
+    headers: {
+      Authorization: 'Token ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  showExpenses
+  showExpenses,
+  newExpense
 }

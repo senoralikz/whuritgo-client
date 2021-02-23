@@ -18,4 +18,6 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
 
   $('#sign-out').on('click', authEvents.onSignOut)
+
+  $('#new-expense').on('submit', authEvents.onNewExpense)
 })

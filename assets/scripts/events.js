@@ -46,9 +46,23 @@ const onSignOut = function (event) {
     .catch(ui.onFailure)
 }
 
+const onNewExpense = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+
+  const data = getFormFields(form)
+
+  api.newExpense(data)
+    .then(ui.onNewExpenseSuccess)
+    .then(ui.onShowExpenses)
+    .catch(ui.onModalFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onNewExpense
 }

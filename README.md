@@ -1,7 +1,7 @@
 # whuritgo
 
 ### Description
-whuritgo helps you keep track of your expenses. Enter your purchase information and itll keep this history of everything you purchased.
+whuritgo helps you keep track of your expenses. Enter your purchase information and it will keep this history of everything you purchased.
 
 ### Technologies Used
 - JavaScript
@@ -43,7 +43,7 @@ The application also uses Django. Below are requests I made to ensure the API wa
 ![Imgur](https://i.imgur.com/GFh21eD.png "Wireframe for Project 4")
 
 - as a user, I would like to sign up
-- as a user, I would like to sign in,
+- as a user, I would like to sign in
 - as a user, I would like to add an expense
 - as a user, I would like to see my most recent expenses
 - as a user, I would like to see my total expenses

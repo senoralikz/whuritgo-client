@@ -2,8 +2,8 @@
 
 let apiUrl
 const apiUrls = {
-  production: '<replace-with-heroku-url>',
-  development: 'http://localhost:4741'
+  production: 'https://whuritgo.herokuapp.com',
+  development: 'http://localhost:8000'
 }
 
 if (window.location.hostname === 'localhost') {

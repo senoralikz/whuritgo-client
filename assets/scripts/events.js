@@ -13,6 +13,7 @@ const onSignUp = function (event) {
 
   api.signUp(data)
     .then(ui.onSignUpSuccess)
+    .catch(ui.onFailure)
 }
 
 const onSignIn = function (event) {
@@ -24,7 +25,7 @@ const onSignIn = function (event) {
   api.signIn(data)
     .then(ui.onSignInSuccess)
     .then(ui.onShowExpenses)
-    .catch(ui.onModalFailure)
+    .catch(ui.onFailure)
 }
 
 const onChangePassword = function (event) {

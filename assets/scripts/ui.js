@@ -92,6 +92,24 @@ const onNewExpenseSuccess = function () {
   $('#addNewExpenseModal').modal('hide')
 }
 
+const onUpdateExpenseSuccess = function () {
+  // $('#message').html('<p>Successfully Updated Task!</p>')
+  $('#successFailureMessage').html('<div class="card text-white bg-success"><div class="card-header">Success</div><div class="card-body"><p class="card-text">Successfully Updated Expense</p></div></div>')
+  $('#successFailureMessage').fadeIn()
+  $('#successFailureMessage').delay(2000).fadeOut('slow')
+  $('#edit-expense').trigger('reset')
+  $('#editExpenseModal').modal('hide')
+}
+
+const onDeleteExpenseSuccess = function () {
+  // $('#message').html('<p>Successfully Deleted Task!</p>')
+  $('#successFailureMessage').html('<div class="card text-white bg-success"><div class="card-header">Success</div><div class="card-body"><p class="card-text">Successfully Deleted Expense</p></div></div>')
+  $('#successFailureMessage').fadeIn()
+  $('#successFailureMessage').delay(2000).fadeOut('slow')
+  $('#delete-expense').trigger('reset')
+  $('#deleteExpenseModal').modal('hide')
+}
+
 const onFailure = function (error) {
   // $('#message').text('Failed with error: ' + error.responseJSON.message)
   $('#successFailureMessage').html(`<div class="card text-white bg-danger"><div class="card-header">Error</div><div class="card-body"><p class="card-text">Failed with error: ${error.responseJSON.message}</p></div></div>`)
@@ -112,6 +130,8 @@ module.exports = {
   onChangePasswordSuccess,
   onSignOutSuccess,
   onNewExpenseSuccess,
+  onUpdateExpenseSuccess,
+  onDeleteExpenseSuccess,
   onFailure,
   onModalFailure
 }

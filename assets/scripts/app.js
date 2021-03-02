@@ -20,4 +20,8 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
 
   $('#new-expense').on('submit', authEvents.onNewExpense)
+
+  $('#edit-expense').on('submit', authEvents.onUpdateExpense)
+
+  $('#delete-expense').on('submit', authEvents.onDeleteExpense)
 })

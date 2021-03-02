@@ -59,10 +59,50 @@ const onNewExpense = function (event) {
     .catch(ui.onModalFailure)
 }
 
+const onUpdateExpense = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+
+  const data = getFormFields(form)
+
+  if (data.expense.id.length !== 0) {
+    api.updateExpense(data)
+      .then(ui.onUpdateExpenseSuccess)
+      .then(ui.onShowExpenses)
+      .catch(ui.onModalFailure)
+  } else {
+    $('.modal-message').text('Please provide an expense id')
+    $('.modal-message').fadeIn()
+    $('.modal-message').delay(2000).fadeOut('slow')
+  }
+}
+
+const onDeleteExpense = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+
+  const data = getFormFields(form)
+
+  if (data.expense.id.length !== 0) {
+    api.deleteExpense(data)
+      .then(ui.onDeleteExpenseSuccess)
+      .then(ui.onShowExpenses)
+      .catch(ui.onModalFailure)
+  } else {
+    $('.modal-message').text('Please provide an expense id')
+    $('.modal-message').fadeIn()
+    $('.modal-message').delay(2000).fadeOut('slow')
+  }
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
-  onNewExpense
+  onNewExpense,
+  onUpdateExpense,
+  onDeleteExpense
 }

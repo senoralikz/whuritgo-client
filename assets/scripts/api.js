@@ -61,11 +61,34 @@ const newExpense = function (formData) {
   })
 }
 
+const updateExpense = function (formData) {
+  return $.ajax({
+    url: config.apiUrl + '/expenses/' + formData.expense.id + '/',
+    method: 'PATCH',
+    data: JSON.stringify(formData),
+    headers: {
+      Authorization: 'Token ' + store.user.token
+    }
+  })
+}
+
+const deleteExpense = function (formData) {
+  return $.ajax({
+    url: config.apiUrl + '/expenses/' + formData.expense.id + '/',
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   showExpenses,
-  newExpense
+  newExpense,
+  updateExpense,
+  deleteExpense
 }

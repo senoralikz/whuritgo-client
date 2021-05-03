@@ -1,9 +1,13 @@
 # whuritgo
 
 ### Description
-whuritgo helps you keep track of your expenses. Enter your purchase information and it will keep this history of everything you purchased.
+
+whuritgo helps you keep track of your expenses. Enter your purchase information and it will keep this history of everything you purchased. To test the app use the credentials below:  
+EMAIL: test@testing.com  
+PASSWORD: 123456
 
 ### Technologies Used
+
 - JavaScript
 - HTML
 - SCSS
@@ -13,7 +17,9 @@ whuritgo helps you keep track of your expenses. Enter your purchase information 
 - Shell
 
 ### Development Process
+
 The goal of the application is to be able to perform the following:
+
 - Have a new user sign up and create hashed password on backend
 - Have an existing user sign in and generate new randomized token
 - Have user be able to add a new expense/purchase with required authentication token
@@ -25,6 +31,7 @@ The goal of the application is to be able to perform the following:
 - Have all forms clear on submit success
 
 The application also uses Django. Below are requests I made to ensure the API was functioning properly:
+
 - POST /sign-up (sign up new user)
 - POST /sign-in (sign in existing user)
 - PATCH /change-password (change users password)
@@ -35,11 +42,13 @@ The application also uses Django. Below are requests I made to ensure the API wa
 - DELETE /expenses (delete specific expense)
 
 ### Unsolved Problems
+
 - Styling
 - Displaying running total of expenses
 - Choose how many purchases to show at once
 
 ### Wireframe and User Stories
+
 ![Imgur](https://i.imgur.com/GFh21eD.png "Wireframe for Project 4")
 
 - as a user, I would like to sign up
@@ -49,6 +58,7 @@ The application also uses Django. Below are requests I made to ensure the API wa
 - as a user, I would like to see my total expenses
 
 ### Links to Repo for API Side of App and the Deployed Sites of Client and API
+
 whuritgo-client deployed site:
 https://senoralikz.github.io/whuritgo-client/
 
